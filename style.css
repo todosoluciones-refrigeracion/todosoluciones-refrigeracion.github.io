@@ -915,11 +915,7 @@ textarea {
     display: none;
   }
 }
-@media (max-width: 640px) {
-  .gallery-grid img:nth-child(n+3) {
-    display: none;
-  }
-}
+
 .gallery-accordion-mobile {
   display: none;
 }
