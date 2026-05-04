@@ -673,11 +673,21 @@ textarea {
   .hero-content h1 {
     font-size: clamp(2.1rem, 9vw, 3.6rem);
   }
+    .header-right {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .header-cta {
+    width: auto;
+  }
 }
 
 @media (max-width: 640px) {
   .container {
-    width: min(100% - 20px, var(--container-width));
+    width: min(100% - 18px, var(--container-width));
   }
 
   .cards-grid,
@@ -689,34 +699,38 @@ textarea {
   }
 
   .section {
-    padding: 42px 0;
+    padding: 34px 0;
   }
 
   .section-heading {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.6rem, 7vw, 2.1rem);
   }
 
   .btn {
     width: 100%;
-    min-height: 46px;
+    min-height: 44px;
   }
 
   .hero {
-    padding: 28px 0 42px;
+    padding: 22px 0 32px;
   }
 
   .hero-actions {
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 14px;
+    gap: 8px;
+    margin-bottom: 10px;
   }
 
   .hero-text {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .hero-image img {
-    min-height: 220px;
+    min-height: 200px;
   }
 
   .booking-form,
@@ -1039,5 +1053,10 @@ textarea {
 
   .services-accordion-mobile {
     display: block;
+  }
+}
+@media (max-width: 640px) {
+  .hero-actions .btn-instagram {
+    display: none;
   }
 }
