@@ -677,7 +677,7 @@ textarea {
 
 @media (max-width: 640px) {
   .container {
-    width: min(100% - 24px, var(--container-width));
+    width: min(100% - 20px, var(--container-width));
   }
 
   .cards-grid,
@@ -689,23 +689,34 @@ textarea {
   }
 
   .section {
-    padding: 62px 0;
+    padding: 42px 0;
   }
 
   .section-heading {
-    margin-bottom: 34px;
+    margin-bottom: 22px;
   }
 
   .btn {
     width: 100%;
+    min-height: 46px;
+  }
+
+  .hero {
+    padding: 28px 0 42px;
   }
 
   .hero-actions {
     flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .hero-text {
+    margin-bottom: 14px;
   }
 
   .hero-image img {
-    min-height: 280px;
+    min-height: 220px;
   }
 
   .booking-form,
@@ -714,62 +725,21 @@ textarea {
   .testimonial-card,
   .faq-item,
   .coverage-box {
-    padding: 22px;
+    padding: 18px;
+  }
+
+  .service-card h3 {
+    margin-bottom: 6px;
+    font-size: 1.08rem;
+  }
+
+  .service-card p {
+    font-size: 0.95rem;
   }
 
   .trust-item {
-    border-radius: 22px;
+    border-radius: 18px;
   }
-}
-
-.form-status {
-  min-height: 24px;
-  margin: 14px 0 0;
-  font-size: 0.95rem;
-  font-weight: 600;
-}
-
-.form-status.success {
-  color: #15803d;
-}
-
-.form-status.error {
-  color: #b91c1c;
-}
-
-.floating-contact {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.floating-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  color: #fff;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
-  transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.floating-btn:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.22);
-}
-
-.floating-btn-whatsapp {
-  background: #25d366;
-}
-
-.floating-btn-instagram {
-  background: linear-gradient(135deg, #833ab4 0%, #e1306c 50%, #f77737 100%);
 }
 
 @media (max-width: 640px) {
@@ -923,5 +893,16 @@ textarea {
 
   #testimonialNext {
     right: 10px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-highlights {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .gallery-grid img:nth-child(n+3) {
+    display: none;
   }
 }
