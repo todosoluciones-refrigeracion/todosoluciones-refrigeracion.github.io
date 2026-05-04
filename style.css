@@ -1056,3 +1056,58 @@ textarea {
     display: none;
   }
 }
+
+.floating-contact {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  text-decoration: none;
+}
+
+.floating-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  fill: currentColor;
+}
+
+@media (max-width: 640px) {
+  .floating-contact {
+    right: 14px;
+    bottom: 14px;
+    z-index: 9999;
+  }
+
+  .floating-btn {
+    width: 54px;
+    height: 54px;
+  }
+}
+.floating-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.22);
+}
+
+.floating-btn-whatsapp {
+  background: #25d366;
+}
+
+.floating-btn-instagram {
+  background: linear-gradient(135deg, #833ab4 0%, #e1306c 50%, #f77737 100%);
+}
