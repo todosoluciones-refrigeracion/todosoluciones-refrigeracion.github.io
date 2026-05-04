@@ -1121,3 +1121,39 @@ textarea {
     padding-top: 12px;
   }
 }
+
+.gallery-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-strip::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-strip::-webkit-scrollbar-thumb {
+  background: rgba(13, 59, 102, 0.22);
+  border-radius: 999px;
+}
+
+.gallery-strip img {
+  flex: 0 0 auto;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(13, 59, 102, 0.08);
+  box-shadow: var(--shadow-card);
+  scroll-snap-align: start;
+  background: linear-gradient(135deg, #d8eaf5 0%, #c3dff0 100%);
+}
+
+@media (max-width: 640px) {
+  .gallery-strip img {
+    width: 170px;
+  }
+}
