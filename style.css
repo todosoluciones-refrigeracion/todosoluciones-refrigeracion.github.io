@@ -1157,3 +1157,8 @@ textarea {
     width: 170px;
   }
 }
+@media (max-width: 640px) {
+  .header-cta {
+    display: none;
+  }
+}
