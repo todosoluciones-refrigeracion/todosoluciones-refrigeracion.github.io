@@ -385,21 +385,36 @@ textarea {
 }
 
 .gallery-desktop {
-  display: grid;
+  display: block;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+.gallery-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
 }
 
-.gallery-grid img {
+.gallery-strip::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-strip::-webkit-scrollbar-thumb {
+  background: rgba(13, 59, 102, 0.22);
+  border-radius: 999px;
+}
+
+.gallery-strip img {
+  flex: 0 0 auto;
+  width: 220px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 20px;
   border: 1px solid rgba(13, 59, 102, 0.08);
   box-shadow: var(--shadow-card);
+  scroll-snap-align: start;
   background: linear-gradient(135deg, #d8eaf5 0%, #c3dff0 100%);
 }
 
@@ -864,9 +879,8 @@ textarea {
     padding-top: 12px;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+  .gallery-strip img {
+    width: 170px;
   }
 
   .booking-form {
