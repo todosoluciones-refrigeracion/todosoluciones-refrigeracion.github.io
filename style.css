@@ -385,7 +385,19 @@ textarea {
 }
 
 .gallery-desktop {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gallery-desktop img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid rgba(13, 59, 102, 0.08);
+  box-shadow: var(--shadow-card);
+  background: linear-gradient(135deg, #d8eaf5 0%, #c3dff0 100%);
 }
 
 .gallery-strip {
@@ -416,15 +428,6 @@ textarea {
   box-shadow: var(--shadow-card);
   scroll-snap-align: start;
   background: linear-gradient(135deg, #d8eaf5 0%, #c3dff0 100%);
-}
-
-.gallery-accordion-mobile {
-  display: none;
-}
-
-/* Booking */
-.booking {
-  background: linear-gradient(180deg, rgba(237, 244, 250, 0.72) 0%, rgba(245, 248, 251, 0) 100%);
 }
 
 .booking-grid {
@@ -860,15 +863,18 @@ textarea {
   }
 
   .services-desktop,
-  .gallery-heading-desktop,
+    .gallery-heading-desktop,
   .gallery-desktop,
   .testimonials {
     display: none;
   }
 
-  .services-accordion-mobile,
   .gallery-accordion-mobile {
     display: block;
+  }
+
+  .gallery-strip img {
+    width: 170px;
   }
 
   #servicios.section {
