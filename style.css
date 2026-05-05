@@ -907,3 +907,13 @@ textarea {
     height: 54px;
   }
 }
+
+@media (max-width: 820px) {
+  .services-desktop {
+    display: none;
+  }
+
+  .services-accordion-mobile {
+    display: block;
+  }
+}
