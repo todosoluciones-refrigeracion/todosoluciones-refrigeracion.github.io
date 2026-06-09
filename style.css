@@ -375,7 +375,8 @@ textarea {
   font-size: 0.96rem;
 }
 
-.services-accordion-mobile {
+.services-accordion-mobile,
+.gallery-accordion-mobile {
   display: none;
 }
 
